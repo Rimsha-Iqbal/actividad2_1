@@ -1,5 +1,6 @@
 # Despliegue del tema "Minima" de Jekyll en GitHub Pages
 # Ejercicio 1  
+
 # Índice
 
 - [Despliegue del tema "Minima" de Jekyll en GitHub Pages](#despliegue-del-tema-minima-de-jekyll-en-github-pages)
@@ -23,6 +24,10 @@
     - [Modificación en la página de inicio (index.md)](#modificación-en-la-página-de-inicio-indexmd)
     - [Creación de una Nueva Página: helloworld.md](#creación-de-una-nueva-página-helloworldmd)
     - [Personalización de la Página about.md](#personalización-de-la-página-aboutmd)
+  - [Publicación de sitio en servidor local](#publicación-de-sitio-en-servidor-local)
+  - [publicación de sitio en GitHub](#publicación-de-sitio-en-github)
+
+
 
 ## Requisitos Previos  
 
@@ -66,12 +71,23 @@ Para este paso usamos un editor de código **"Visual Studio Code"**. Usamos serv
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc  
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc  
 source ~/.bashrc**
-- Con el comando ruby -v confirmamos la instalación y versión.
-- Con gem -v, g++ -v confirmamos instalación ye gems.
+- Con el comando ruby -v confirmamos la instalación y versión.  
+  
+  ![alt text](img/img1.png)
+
+- Con gem -v, g++ -v confirmamos instalación ye gems.  
+- 
+  ![alt text](img/img2.png)  
+
+  ![alt text](img/img3.png)
 
 ## Instalación de Bundler y Jekyll
 
-- Usamos el comandos **"gem install jekyll bundler"** para instalar bundler de jekyll en debian 12.
+- Usamos el comandos **"gem install jekyll bundler"** para instalar bundler de jekyll en debian 12.  
+  
+  ![alt text](img/img4.png)
+
+  ![alt text](img/img5.png)
 
 ## Creación de un sitio/proyecto de Jekyll
 
@@ -114,5 +130,19 @@ source ~/.bashrc**
 
 ### Personalización de la Página about.md
 - Mismo que anterior el cabezados añadimo **layout** (page),**title** ("Acerca de mi") y **primalink** (/about/).
-- Añadimos contenicd ..
+- Añadimos contenido.
 
+## Publicación de sitio en servidor local
+
+Con el comando "budle exec jekyll serve --host 10.0.22.X" desplegamos nuestro sitio en servidor local.
+
+![alt text](img/imagenlocalservr.png)
+
+## publicación de sitio en GitHub
+- Con "git remote add origin" syncronamos nuestro repositorio con repositorio local.
+- Con "git add ." subimos todos modificaciones a repositorio local.
+- Con git commoit -m" añadimos mensaje a este.
+- Con "git push origin gh-pages" subimos todos los cambios al repositorio remoto en github.  
+  
+  
+  ![alt text](img/github.png)
